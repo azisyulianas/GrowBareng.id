@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/ab9b708465.js" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="./bootstrap-5.2.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="text-light container-fluid" style="background-color:#201F1F;max-width: 1435px;">
     <header class="container-lg">
@@ -48,13 +48,14 @@
                         </p>
                         <div class="row">
                             <div class="pt-5">
-                                <button type="button" class="btn text-light" style="background: #167B4A; ">Contact US</button>
+                                <button type="button" class="btn text-light" style="background: #167B4A; " onclick="pesan()">Contact US</button>
+                                <!-- <button type="button" class="btn text-light" style="background: #167B4A; " onclick="ubahgambar()">Contact US</button> -->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5 ps-5">
-                    <img src="./image/fotohome.png" alt="Foto Home">
+                    <img src="./img-product/brand1.png" id="foto-pruduct" alt="Foto Home">
                 </div>
             </div>
         </section>
@@ -325,28 +326,33 @@
                 <div class="col-md-6 ">
                         <h1 class="text-title">Let’s Discuss Your Project</h1>
                 </div>
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" class="form-control bg-transparent" id="name" aria-describedby="name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="youremail" class="form-label">Your Email</label>
-                        <input type="email" class="form-control bg-transparent" id="youremail" aria-describedby="youremail">
-                    </div>
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control bg-transparent" id="subject" aria-describedby="subject">
-                    </div>
-                    <div class="mb-3">
-                        <label for="subtextarea" class="form-label">Subject</label>
-                        <textarea class="form-control bg-transparent" id="subtextarea" rows="3"></textarea>
-                    </div>
+                <form action="" class="text-light">
+                    
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control bg-transparent text-light" id="name" aria-describedby="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="youremail" class="form-label">Your Email</label>
+                            <input type="email" class="form-control bg-transparent" id="youremail" aria-describedby="youremail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control bg-transparent" id="subject" aria-describedby="subject">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subtextarea" class="form-label">Subject</label>
+                            <textarea class="form-control bg-transparent" id="subtextarea" rows="3"></textarea>
+                        </div>
+                        <input type="button" value="Masukan" id="input" onclick="getData()">
+                </form>
                 </div>
             </div>
         </section>
     </main>
     <footer style="background-color:black" class="">
+        
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-4 mt-lg-5 g-2 g-lg-3">
                 <div class="col">
@@ -372,6 +378,22 @@
             </div>
         </div>
     </footer>
+    <h id="Judul"></h>
     <script src="./bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+    <!-- <script>
+        function pesan(){
+            var nama = prompt('Masukan Nama Anda');
+            document.getElementById('Judul').innerHTML = "Hai "+nama+" Selamat datang di Web kami";
+        }
+        function ubahgambar(){
+            // var number= random(1-6)
+            document.getElementById('foto-pruduct').setAttribute('src','./img-product/brand'+number+'.png');
+        }
+        function getData(){
+            var namalengkap=document.getElementById('name').value;
+            document.getElementById('Judul').innerHTML = "Hai "+namalengkap+" Selamat datang di Web kami";
+        }
+    </script> -->
+    
 </body>
 </html>
